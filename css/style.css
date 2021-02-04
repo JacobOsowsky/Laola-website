@@ -1,0 +1,1125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'raleway';
+
+}
+
+body {
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+
+.start {
+    height: 100vh;
+    background-image: url(../img/main.jpg);
+    border-bottom: 1px solid silver;
+}
+
+.background {
+    height: 100%;
+    background-color: rgba(34, 48, 65, 0.4);
+
+}
+
+.background .call img {
+    width: 4vw;
+    transform: translate(65vw, 32vh);
+    cursor: pointer;
+    animation: phone 4s ease infinite;
+}
+
+@keyframes phone {
+    0% {
+        transform: translate(65vw, 32vh);
+    }
+
+    2% {
+        transform: translate(65.1vw, 32vh);
+
+    }
+
+    4% {
+        transform: translate(64.9vw, 32vh);
+
+    }
+
+    6% {
+        transform: translate(65.1vw, 32vh);
+
+    }
+
+    8% {
+        transform: translate(64.9vw, 32vh);
+
+    }
+
+    10% {
+        transform: translate(65.1vw, 32vh);
+
+    }
+
+    12% {
+        transform: translate(64.9vw, 32vh);
+
+    }
+
+    14% {
+        transform: translate(65.1vw, 32vh);
+
+    }
+
+    16% {
+        transform: translate(64.9vw, 32vh);
+
+    }
+
+    18% {
+        transform: translate(65.1vw, 32vh);
+
+    }
+
+    20% {
+        transform: translate(64.9vw, 32vh);
+    }
+
+    22% {
+        transform: translate(65vw, 32vh);
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9vh;
+    border-bottom: 1px solid silver;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+nav .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 7vh;
+    font-size: 40px;
+    font-family: 'goldman';
+    color: whitesmoke;
+    margin-left: 15vw;
+    font-weight: 400;
+}
+
+
+nav ul {
+    width: 20%;
+    margin: 0 25vw 0 auto;
+    list-style: none;
+    line-height: 9vh;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: whitesmoke;
+    text-align: center;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 2vw;
+    cursor: pointer;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.advert {
+    position: relative;
+    height: 30vh;
+    max-width: 45vw;
+    color: #FFFFFF;
+    text-align: right;
+    transform: translate(52vw, 40vh);
+    text-align: left;
+    text-shadow: 1px 1px black;
+    overflow: hidden;
+}
+
+.advert h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 1000;
+    font-size: 70px;
+    text-transform: uppercase;
+    transform: translateX(-60vw);
+    animation: h1 10s ease infinite;
+}
+
+
+.advert h2 {
+    position: absolute;
+    top: 17vh;
+    left: 0;
+    transform: translateX(-60vw);
+    font-weight: 500;
+    text-transform: uppercase;
+    animation: h1 10s ease infinite;
+    animation-delay: 0.5s;
+}
+
+.advert h1.second {
+    animation-delay: 5s;
+}
+
+.advert h2.second {
+    animation-delay: 5.5s;
+}
+
+nav p {
+    position: absolute;
+    top: 6vh;
+    left: 0;
+    margin-left: 15vw;
+    color: white;
+    text-transform: uppercase;
+}
+
+@keyframes h1 {
+    0% {
+        transform: translateX(-60vw);
+    }
+
+
+    10% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(-60vw);
+    }
+
+    100% {
+        transform: translateX(-60vw);
+    }
+}
+
+
+.about {
+    width: 70vw;
+    margin: 0 auto 0 auto;
+
+}
+
+.about h3 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 7vh;
+    color: #555555;
+}
+
+.about h4 {
+    text-align: center;
+    margin-top: 7vh;
+    color: #555555;
+    font-size: 26px;
+    line-height: 4vh;
+
+}
+
+.features {
+    margin: 7vh auto 0 auto;
+    text-align: center;
+}
+
+.features p {
+    display: block;
+    color: #555555;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.features p.last {
+    line-height: 4vh;
+    margin-top: 4vh;
+}
+
+p.detail {
+    margin-top: 2vh;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 3vh;
+
+}
+
+
+.features .clearfix {
+    margin-top: 4vh;
+}
+
+.features div div {
+    display: inline-block;
+    width: 15vw;
+    height: 40vh;
+    margin: 0 4.8vh 0 4.8vh;
+    padding: 0 1vw 0 1vw;
+    border: 1px solid #dddddd;
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.features div div p {
+    display: block;
+}
+
+.features div div img {
+    margin: 6vh auto 2vh auto;
+    display: block;
+    width: 5vw;
+}
+
+.working {
+    background-image: url(../img/contact.jpg);
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    margin-top: 5vh;
+    color: #ffffff;
+}
+
+.working .background {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.working h3 {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 5vh;
+    letter-spacing: 1px;
+
+}
+
+.steps {
+    margin-top: 5vh;
+}
+
+.steps div {
+    position: relative;
+    text-align: center;
+}
+
+.steps div p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.steps div img:first-child {
+    height: 6vh;
+    color: white;
+    margin-top: 1vh;
+}
+
+.steps div img:last-child {
+    height: 3vh;
+    margin-top: 2vh;
+}
+
+.galery {
+    margin-bottom: 5vh;
+}
+
+.galery h3 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 7vh;
+    color: #555555;
+    letter-spacing: 1px;
+}
+
+.galery p {
+    margin-top: 4vh;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #555555;
+}
+
+.portfolio {
+    width: 70vw;
+    height: 80%;
+    margin: 5vh auto 0 auto;
+    text-align: center;
+}
+
+.portfolio div {
+    display: inline-block;
+    width: 22vw;
+    height: 16vw;
+    margin: 0.4vh 0.4vh 0.4vh 0.4vh;
+    border: 1px solid silver;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 105%;
+
+}
+
+.portfolio div:first-child {
+    background-image: url(../img/1.jpg);
+}
+
+.portfolio div:nth-child(2) {
+    background-image: url(../img/2.jpg);
+}
+
+.portfolio div:nth-child(3) {
+    background-image: url(../img/3.jpg);
+}
+
+.portfolio div:nth-child(4) {
+    background-image: url(../img/4.jpg);
+
+}
+
+.portfolio div:nth-child(5) {
+    background-image: url(../img/5.jpg);
+    background-size: 130%;
+}
+
+.portfolio div:nth-child(6) {
+    background-image: url(../img/6.jpg);
+}
+
+.portfolio div:nth-child(7) {
+    background-image: url(../img/7.jpg);
+}
+
+.portfolio div:nth-child(8) {
+    background-image: url(../img/8.jpg);
+}
+
+.portfolio div:nth-child(9) {
+    background-image: url(../img/9.jpg);
+}
+
+
+.contact {
+    background-image: url(../img/contact.jpg);
+    border-top: 1px solid silver;
+}
+
+
+.contact .background {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+.contact h5 {
+    display: block;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 5vh;
+    letter-spacing: 1px;
+
+}
+
+.contact .mailphone {
+    width: 60vw;
+    text-align: center;
+    margin: 6vh auto 0 auto;
+    padding: 0 auto 0 auto;
+}
+
+.contact img {
+    width: 3vw;
+    margin-top: 2vh;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.contact p {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    line-height: 3vw;
+    vertical-align: middle;
+    transform: translateY(-2.5vh);
+
+}
+
+div.mail,
+div.phone {
+    display: inline-block;
+}
+
+div.phone {
+    margin-left: 7vw;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.contact footer p {
+    color: white;
+    line-height: 5vh;
+    font-size: 16px;
+    transform: translateY(0);
+}
+
+@media (max-width: 1785px) and (orientation: landscape) {
+    .start {
+        background-size: 100%;
+    }
+
+    nav ul {
+        width: 30%;
+
+    }
+
+    .advert h1 {
+        font-size: 56px
+    }
+
+    .advert h2 {
+        top: 17vh;
+
+    }
+
+    .about h3,
+    .galery h3 {
+        font-size: 42px;
+    }
+
+    .about h4 {
+        line-height: 5vh;
+        font-size: 22px;
+    }
+
+
+    .features div div {
+        height: 45vh;
+    }
+
+    .features div div p {
+        line-height: 4vh;
+    }
+
+
+    .contact {
+        background-size: 100%;
+    }
+
+    div.mail,
+    div.phone {
+        display: inline-block;
+    }
+
+    div.phone {
+        margin-left: 1vw;
+    }
+}
+
+@media (max-width: 1367px) and (orientation: landscape) {
+    .start {
+        background-size: 130%;
+    }
+
+    .advert h1 {
+        font-size: 50px;
+
+    }
+
+    .advert h2 {
+        top: 12vh;
+
+    }
+
+    .about {
+        width: 80vw;
+    }
+
+    .about h4 {
+        font-size: 22px;
+
+    }
+
+    .features div div {
+        height: 35vh;
+    }
+
+    .portfolio div {
+        width: 34vw;
+        height: 20vw;
+        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
+        background-size: 105%;
+
+    }
+
+    .contact {
+        background-size: 100%;
+
+    }
+
+    .contact .mailphone {
+        margin: 8vh auto 0 auto;
+
+    }
+
+
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .start {
+        background-size: 120%;
+    }
+
+    .advert h1 {
+        font-size: 40px;
+    }
+
+    .advert h2 {
+        font-size: 16px;
+
+    }
+
+    .about h3 {
+        font-size: 44px;
+
+    }
+
+    .about h4 {
+        font-size: 20px;
+
+    }
+
+    .about p.last {
+        line-height: 6vh;
+    }
+
+    .features p,
+    .features div div {
+        font-size: 18px;
+    }
+
+    .features div div p {
+        font-size: 14px;
+    }
+
+    .steps div p {
+        font-size: 16px;
+    }
+
+    .galery h3 {
+        padding-top: 10vh;
+        font-size: 44px;
+
+    }
+
+    .contact {
+        background-size: 100%;
+
+    }
+
+    .contact .mailphone {
+        margin: 4vh auto 0 auto;
+
+    }
+
+
+    .contact p {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+    .start {
+        background-size: 100%;
+    }
+
+    nav ul {
+        width: 50%;
+        margin-right: 5vw;
+
+    }
+
+    nav .logo {
+        line-height: 9vh;
+    }
+
+    nav p {
+        display: none;
+    }
+
+    .advert h1 {
+        font-size: 24px;
+    }
+
+    .advert h2 {
+        font-size: 14px;
+        top: 16vh;
+
+    }
+
+    .background .call img {
+        width: 6vw;
+    }
+
+    .about h3 {
+        font-size: 34px;
+
+    }
+
+    .galery h3 {
+        font-size: 34px;
+    }
+
+    .about h4 {
+        font-size: 18px;
+        line-height: 6vh;
+
+    }
+
+    .steps div p {
+        font-size: 14px;
+    }
+
+    .galery p {
+        font-size: 16px;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .features div div {
+        width: 20vw;
+        height: 55vh;
+
+    }
+
+    .features div div p {
+        line-height: 5vh;
+        font-size: 12px;
+    }
+
+    .steps div img:first-child {
+        height: 8vh;
+    }
+
+
+    .portfolio div {
+        width: 60vw;
+        height: 40vw;
+        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
+        background-size: 105%;
+    }
+
+    .contact {
+        background-size: 100%;
+    }
+
+    .contact h5 {
+        font-size: 20px;
+    }
+
+    .mailphone div {
+        display: block;
+        margin-top: 2vh;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    .contact .mailphone {
+        margin: 8vh auto 5vh auto;
+
+    }
+
+    .mailphone img {
+        display: none;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 568px) and (orientation: landscape) {
+    .advert h1 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .start {
+        background-size: 200%;
+    }
+
+    nav .logo {
+        font-size: 50px;
+    }
+
+    nav ul {
+        width: 40%;
+        margin-right: 5vw;
+    }
+
+    nav ul li {
+        margin-left: 3vw;
+        font-size: 18px;
+    }
+
+    .advert {
+        transform: translate(30vw, 40vh);
+        max-width: 55vw;
+
+    }
+
+    .advert h1 {
+        font-size: 40px;
+    }
+
+    .advert h2 {
+        font-size: 25px;
+        top: 7vh;
+    }
+
+    .about {
+        width: 90vw;
+    }
+
+    .features p {
+        font-size: 24px;
+    }
+
+    .features div div {
+        width: 24vw;
+        height: 30vh;
+        margin: 0 2vh 0 2vh;
+    }
+
+    .working {
+        background-size: 280%;
+    }
+
+    .working .steps {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .galery h3 {
+        padding-top: 4vh;
+    }
+
+    .steps div p {
+        font-size: 22px;
+        line-height: 3vh;
+    }
+
+    .galery p {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 24px;
+        line-height: 3vh;
+    }
+
+    .portfolio div {
+        width: 60vw;
+        height: 40vw;
+        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
+        background-size: 105%;
+    }
+
+    .contact {
+        background-size: 100%;
+    }
+
+    .contact .mailphone {
+        margin: 3vh auto 0 auto;
+    }
+
+    .mailphone div {
+        display: block;
+        margin-top: 2vh;
+    }
+
+    div .phone {
+        margin-left: 0;
+    }
+
+    .mailphone img {
+        display: none;
+    }
+
+    .contact p {
+        transform: translateY(-1vh);
+
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    nav .logo {
+        margin-left: 8vw;
+    }
+
+    nav p {
+        margin-left: 8vw;
+    }
+
+    nav ul {
+        width: 50%;
+        margin-right: 1vw;
+    }
+
+    .advert h1 {
+        font-size: 30px;
+    }
+
+    .advert h2 {
+        font-size: 18px;
+        top: 7vh;
+
+    }
+
+    .background .call img {
+        width: 8vw;
+
+    }
+
+    .about h4 {
+        font-size: 24px;
+        line-height: 4vh;
+
+    }
+
+    .features p,
+    .features div div {
+        font-size: 22px;
+    }
+
+    .features div div p {
+        font-size: 18px;
+    }
+
+    .working {
+        background-size: 310%;
+    }
+
+    .portfolio {
+        width: 80%;
+    }
+
+    .contact p {
+        font-size: 20px;
+    }
+
+    .contact {
+        background-size: 200%;
+    }
+}
+
+@media (max-width: 414px) and (orientation: portrait) {
+    .start {
+        background-size: 270%;
+    }
+
+    nav .logo {
+        font-size: 30px;
+        line-height: 9vh;
+    }
+
+    nav p {
+        display: none;
+    }
+
+    nav ul {
+        width: 55%;
+        margin-right: 5vw;
+    }
+
+    nav ul li {
+        margin-left: 3vw;
+        font-size: 10px;
+    }
+
+    .advert h1 {
+        font-size: 16px;
+    }
+
+    .advert h2 {
+        font-size: 12px;
+        top: 6vh;
+    }
+
+    .background .call img {
+        width: 10vw;
+    }
+
+    .about h3 {
+        font-size: 24px;
+        padding-top: 5vh;
+    }
+
+    .about h4 {
+        font-size: 14px;
+        line-height: 4vh;
+        margin-top: 5vh;
+    }
+
+    .features p,
+    .features div div p {
+        font-size: 12px;
+    }
+
+    .features div div {
+        width: 29vw;
+        margin: 0 0.1vw 0 0.1vw;
+    }
+
+    .features p.last,
+    .features p:first-child {
+        line-height: 3vh;
+    }
+
+    div.clearfix {
+        width: 100%;
+    }
+
+    .working {
+        background-size: 600%;
+    }
+
+    .working h3 {
+        font-size: 20px;
+    }
+
+    .steps div p {
+        font-size: 14px;
+        line-height: 3vh;
+    }
+
+    .galery h3 {
+        font-size: 24px;
+        padding-top: 6vh;
+    }
+
+    .galery p {
+        font-size: 16px;
+    }
+
+    .portfolio {
+        width: 85vw;
+        margin-top: 5vh;
+    }
+
+    .portfolio div {
+        width: 85vw;
+        height: 60vw;
+        margin: 0.4vh auto 0.4vh auto;
+        background-size: 105%;
+    }
+
+
+    .contact h5 {
+        font-size: 18px;
+    }
+
+    .contact img {
+        display: none;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    .contact .mailphone {
+        margin: 4vh auto 0 auto;
+        text-align: center;
+    }
+
+    div.phone {
+        margin: 2vh 0 0 0;
+    }
+
+    .contact footer p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 414px) and (orientation: portrait) {
+    .start {
+        background-size: 300%;
+    }
+
+    .advert h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) and (orientation: portrait) {
+    .start {
+        background-size: 330%;
+    }
+
+    .advert h1 {
+        font-size: 16px;
+    }
+
+    .advert h2 {
+        top: 6vh;
+    }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+    .advert h2 {
+        top: 6vh;
+    }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+    nav ul li {
+        font-size: 9px;
+    }
+
+    .advert h2 {
+        top: 8.5vh;
+    }
+
+    .features div div {
+        width: 31vw;
+        margin: 0 0.1vw 0 0.1vw;
+    }
+
+    .about {
+        width: 98vw;
+    }
+
+}

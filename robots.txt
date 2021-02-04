@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: http://studiolaola.pl/sitemap_location.xml
