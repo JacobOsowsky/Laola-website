@@ -8,23 +8,29 @@ const start  = document.querySelector('section.start');
 const about  = document.querySelector('section.about');
 const galery  = document.querySelector('section.galery');
 const contact  = document.querySelector('section.contact');
+const arrowsDiv = document.querySelector('.arrows')
+const arrows = document.querySelectorAll('.fas');
 const startPositionY = start.offsetTop;
 const aboutPositionY = about.offsetTop;
 const galeryPositionY = galery.offsetTop;
 const contactPositionY = contact.offsetTop;
 const navHeight = nav.offsetHeight;
 
-// ZMIANA TŁA NAWIGACJI
-function changeNav () {
+
+
+// ZMIANA TŁA NAWIGACJI I UKRYWANIE STRZAŁEK
+function changeNavAndArrows () {
     if (window.pageYOffset > 0) {
     nav.classList.add('active');
+    arrowsDiv.classList.add("hidden")
     }
     else if (window.pageYOffset == 0) {
         nav.classList.remove('active');
+        arrowsDiv.classList.remove("hidden")
     }
 }
 
-window.addEventListener('scroll', changeNav);
+window.addEventListener('scroll', changeNavAndArrows);
 // 
 
 
@@ -60,13 +66,16 @@ function goToContact () {
         behavior: 'smooth'
       });
 }
-
+function handleArrows (item) {
+    item.addEventListener('click', goToAbout)
+}
 
 phone.addEventListener('click', goToContact);
 startButton.addEventListener('click', goToStart);
 aboutButton.addEventListener('click', goToAbout);
 galeryButton.addEventListener('click', goToGalery);
 contactButton.addEventListener('click', goToContact);
+arrows.forEach(handleArrows);
 
 //INFO O COOKIES
 (function() {

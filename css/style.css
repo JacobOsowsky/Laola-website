@@ -68,6 +68,8 @@ body {
 .start {
     height: 100vh;
     background-image: url(../img/main.jpg);
+    background-position: center;
+    background-attachment: fixed;
     border-bottom: 1px solid silver;
 }
 
@@ -84,9 +86,105 @@ body {
     animation: phone 4s ease infinite;
 }
 
+
+.background .arrows {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.arrows i {
+    display: block;
+    color: rgb(74, 221, 118);
+    font-size: 30px;
+    animation: arrow1 2s normal infinite;
+    cursor: pointer;
+}
+
+.arrows i:nth-child(2) {
+    animation-name: arrow2;
+}
+
+.arrows i:nth-child(3) {
+    animation-name: arrow3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@keyframes arrow1 {
+    0% {
+        opacity: 0;
+    }
+
+
+    25% {
+        opacity: 0.33;
+    }
+
+    35% {
+        opacity: 0.33;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes arrow2 {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.66
+    }
+
+    60% {
+        opacity: 0.66
+    }
+
+    100% {
+        opacity: 0
+    }
+
+}
+
+@keyframes arrow3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes phone {
     0% {
-        transform: translate(65vw, 32vh);
+        transform: translateX(65vw, 32vh);
     }
 
     2% {
@@ -202,7 +300,7 @@ nav ul li {
     max-width: 45vw;
     color: #FFFFFF;
     text-align: right;
-    transform: translate(52vw, 40vh);
+    transform: translate(52vw, 34vh);
     text-align: left;
     text-shadow: 1px 1px black;
     overflow: hidden;
@@ -306,6 +404,12 @@ nav p {
     font-weight: 600;
 }
 
+.features ul {
+    color: #555555;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .features p.last {
     line-height: 4vh;
     margin-top: 4vh;
@@ -345,7 +449,9 @@ p.detail {
 }
 
 .working {
-    background-image: url(../img/contact.jpg);
+    background-image: url(../img/main3.jpg);
+    background-position: center;
+    background-attachment: fixed;
     border-top: 1px solid silver;
     border-bottom: 1px solid silver;
     margin-top: 5vh;
@@ -354,9 +460,10 @@ p.detail {
 
 .working .background {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     padding-bottom: 5vh;
+    backdrop-filter: blur(2px);
 }
 
 .working h3 {
@@ -415,59 +522,72 @@ p.detail {
 
 .portfolio {
     width: 70vw;
-    height: 80%;
     margin: 5vh auto 0 auto;
     text-align: center;
 }
 
-.portfolio div {
+.portfolio .wrap {
     display: inline-block;
+    vertical-align: top;
+    width: 22vw;
+    margin: 0.4vh 4vh 3vh 4vh;
+}
+
+
+.wrap .photo {
     width: 22vw;
     height: 16vw;
-    margin: 0.4vh 0.4vh 0.4vh 0.4vh;
-    border: 1px solid silver;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 105%;
+    border-radius: 10px;
+
 
 }
 
-.portfolio div:first-child {
-    background-image: url(../img/1.jpg);
+.wrap p {
+    font-size: 16px;
+    margin-top: 1vh;
+    color: black;
 }
 
-.portfolio div:nth-child(2) {
+.portfolio div:first-child div {
     background-image: url(../img/2.jpg);
 }
 
-.portfolio div:nth-child(3) {
+
+.portfolio div:nth-child(2) div {
     background-image: url(../img/3.jpg);
 }
 
-.portfolio div:nth-child(4) {
+.portfolio div:nth-child(3) div {
     background-image: url(../img/4.jpg);
 
 }
 
-.portfolio div:nth-child(5) {
+.portfolio div:nth-child(4) div {
     background-image: url(../img/5.jpg);
     background-size: 130%;
 }
 
-.portfolio div:nth-child(6) {
+.portfolio div:nth-child(5) div {
     background-image: url(../img/6.jpg);
 }
 
-.portfolio div:nth-child(7) {
+.portfolio div:nth-child(6) div {
     background-image: url(../img/7.jpg);
 }
 
-.portfolio div:nth-child(8) {
+.portfolio div:nth-child(7) div {
     background-image: url(../img/8.jpg);
 }
 
-.portfolio div:nth-child(9) {
+.portfolio div:nth-child(8) div {
     background-image: url(../img/9.jpg);
+}
+
+.galery .alert {
+    font-size: 14px;
 }
 
 
@@ -599,7 +719,7 @@ footer {
 
 @media (max-width: 1367px) and (orientation: landscape) {
     .start {
-        background-size: 130%;
+        background-size: 100%;
     }
 
     .advert h1 {
@@ -625,12 +745,15 @@ footer {
         height: 35vh;
     }
 
-    .portfolio div {
+    .portfolio .wrap {
         width: 34vw;
-        height: 20vw;
-        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
+        margin: 0.6vh 0.4vh 2vh 0.6vh;
         background-size: 105%;
+    }
 
+    .wrap .photo {
+        width: 34vw;
+        height: 22vw;
     }
 
     .contact {
@@ -648,7 +771,11 @@ footer {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .start {
-        background-size: 120%;
+        background-size: 100%;
+    }
+
+    .arrows i {
+        font-size: 20px;
     }
 
     .advert h1 {
@@ -691,6 +818,10 @@ footer {
         padding-top: 10vh;
         font-size: 44px;
 
+    }
+
+    .wrap p {
+        font-size: 14px;
     }
 
     .contact {
@@ -784,11 +915,24 @@ footer {
     }
 
 
-    .portfolio div {
+    .portfolio .wrap {
+        width: 60vw;
+        margin: 0.4vh 0.4vh 5vh 0.4vh;
+    }
+
+    .wrap .photo {
         width: 60vw;
         height: 40vw;
-        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
         background-size: 105%;
+    }
+
+    .wrap p {
+        font-size: 12px;
+        margin-top: 2vh;
+    }
+
+    .galery .alert {
+        font-size: 12px;
     }
 
     .contact {
@@ -831,8 +975,9 @@ footer {
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
-    .start {
-        background-size: 200%;
+
+    .arrows i {
+        font-size: 20px;
     }
 
     nav .logo {
@@ -879,7 +1024,7 @@ footer {
     }
 
     .working {
-        background-size: 280%;
+        background-size: 240%;
     }
 
     .working .steps {
@@ -905,11 +1050,19 @@ footer {
         line-height: 3vh;
     }
 
-    .portfolio div {
+    .portfolio .wrap {
+        width: 60vw;
+        margin: 0.4vh 0.4vh 3vh 0.4vh;
+    }
+
+    .wrap .photo {
         width: 60vw;
         height: 40vw;
-        margin: 0.4vh 0.4vh 0.4vh 0.4vh;
         background-size: 105%;
+    }
+
+    .wrap p {
+        width: 60vw;
     }
 
     .contact {
@@ -991,6 +1144,11 @@ footer {
         width: 80%;
     }
 
+    .wrap p {
+        font-size: 16px;
+        line-height: 2vh;
+    }
+
     .contact p {
         font-size: 20px;
     }
@@ -1053,6 +1211,10 @@ footer {
         font-size: 12px;
     }
 
+    .features div div img {
+        width: 7vw;
+    }
+
     .features div div {
         width: 29vw;
         margin: 0 0.1vw 0 0.1vw;
@@ -1089,18 +1251,32 @@ footer {
         font-size: 16px;
     }
 
+
     .portfolio {
         width: 85vw;
         margin-top: 5vh;
     }
 
-    .portfolio div {
+    .portfolio .wrap {
+        width: 85vw;
+        margin: 0.4vh auto 3vh auto;
+    }
+
+    .wrap .photo {
         width: 85vw;
         height: 60vw;
-        margin: 0.4vh auto 0.4vh auto;
         background-size: 105%;
     }
 
+    .wrap p {
+        width: 85vw;
+        font-size: 12px;
+        line-height: 2.5vh;
+    }
+
+    .galery .alert {
+        font-size: 12px;
+    }
 
     .contact h5 {
         font-size: 18px;
